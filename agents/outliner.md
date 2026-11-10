@@ -25,11 +25,13 @@ You plan the scenes of a novel whose state lives in `book/`. The scene manifest 
 
 ## Mode
 
-The delegation message names one; with none, use `build` when no manifest exists and `repair` when one does.
+There is no manifest yet when `book/outline/scenes.yaml` is missing or its only scene is the template's example (`ch01-s01` with empty `pov` and `goal`); otherwise there is a real one. The delegation message names the mode; with none, use `build` when there is no manifest yet and `repair` when there is a real one.
 
 - **build**: no manifest yet; write it from scratch as below.
 - **repair**: the manifest may hold the author's own edits. Change only what an ERROR of the outline check needs, scene by scene, and leave every other scene and field word for word. Do not act on warnings; list them in your reply.
-- **rebuild**: the author asked for a new manifest. Rebuild it as below, but keep every scene id and field that still fits, and list in your reply the scenes you removed or changed substantially.
+- **rebuild**: the author asked for a new manifest. Rebuild it as below, but keep every scene id and field that still fits.
+
+In repair and rebuild mode, before changing anything, copy the current `scenes.yaml` unchanged to `book/proposals/scenes-before-<YYYY-MM-DD>.yaml` (add `-2`, `-3` if that file exists), and list in your reply every scene id you changed or removed.
 
 ## Build the manifest
 
@@ -72,4 +74,4 @@ After the outline check, run the 13 checks in `<plugin root>/skills/de-ai/refere
 
 ## Return
 
-Reply in at most ten lines: files written; the outline check's final line (manual check, PASS/FAIL with counts); errors you could not fix and why; the number of de-AI outline checks that failed (three or more means the outline should be revised before drafting); and any characters or decisions the author must supply. Do not paste file contents.
+Reply in at most ten lines, plus the list of changed or removed scene ids in repair and rebuild mode: files written; the outline check's final line (manual check, PASS/FAIL with counts); errors you could not fix and why; the number of de-AI outline checks that failed (three or more means the outline should be revised before drafting); and any characters or decisions the author must supply. Do not paste file contents.
