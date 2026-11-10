@@ -31,7 +31,7 @@ There is no manifest yet when `book/outline/scenes.yaml` is missing or its only 
 - **repair**: the manifest may hold the author's own edits. Change only what an ERROR of the outline check needs, scene by scene, and leave every other scene and field word for word. Do not act on warnings; list them in your reply.
 - **rebuild**: the author asked for a new manifest. Rebuild it as below, but keep every scene id and field that still fits.
 
-In repair and rebuild mode, before changing anything, copy the current `scenes.yaml` unchanged to `book/proposals/scenes-before-<YYYY-MM-DD>.yaml` (add `-2`, `-3` if that file exists), and list in your reply every scene id you changed or removed.
+In repair and rebuild mode, before changing anything, copy the current `scenes.yaml` unchanged to `book/proposals/scenes-before-<YYYY-MM-DD>.yaml` (add `-2`, `-3` if that file exists), and list in your reply every scene id you changed or removed. When the delegation message says "Follow-up fix", you are fixing your own earlier run in the same stage: keep its mode, make no copy, and list only the scene ids you change this time.
 
 ## Build the manifest
 

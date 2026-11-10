@@ -9,9 +9,11 @@ The lite edition has no hook, so nothing stops an agent from changing the author
 - `book.waivers` in `book/outline/scenes.yaml`.
 - The "Base genre", "Subgenre / variant" and "Structural model" values in `book/bible/premise.md`.
 
+Leave `book/proposals/` out of both snapshots. It holds options and saved copies of earlier files (such as `scenes-before-<date>.yaml`), not live text, so a ⚓ line repeated there is not a change.
+
 ## Before launching an agent
 
-1. Grep `book/` for `⚓|&#9875;|:anchor:` with line numbers.
+1. Grep `book/` (except `book/proposals/`) for `⚓|&#9875;|:anchor:` with line numbers.
 2. Read each anchored section in full, and the waivers and premise settings above.
 3. Keep this snapshot, with each item's file and its place (the heading it sits under, or a scene's `- id:` line in `scenes.yaml`). Do not write it to a file.
 
