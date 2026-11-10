@@ -1,0 +1,34 @@
+{
+  "name": "novelsmith-lite",
+  "displayName": "Novelsmith Lite",
+  "version": "0.1.0",
+  "description": "Outline-first, multi-agent novel writing. The book lives in a book/ tree of Markdown and YAML; specialist agents propose and write files there and stop at every stage boundary so the author decides.",
+  "author": { "name": "Nanna Setämaa" },
+  "license": "MIT",
+  "keywords": ["fiction", "novel", "writing", "outline", "mystery", "nordic-noir"],
+  "homepage": "https://github.com/Nannakaroliina/novelsmith-lite",
+  "repository": "https://github.com/Nannakaroliina/novelsmith-lite",
+  "documentationUrl": "https://github.com/Nannakaroliina/novelsmith-lite#readme",
+  "supportUrl": "https://github.com/Nannakaroliina/novelsmith-lite/issues",
+  "privacyPolicyUrl": "https://github.com/Nannakaroliina/novelsmith-lite/blob/main/PRIVACY.md",
+  "icon": "./assets/novelsmith-icon-512.png",
+  "userConfig": {
+    "author_name": {
+      "type": "string",
+      "title": "Author name",
+      "description": "Your name as it should appear in book/progress.md and the premise byline."
+    },
+    "default_genre": {
+      "type": "string",
+      "title": "Default genre",
+      "description": "Base genre offered when starting a new book, e.g. mystery.",
+      "default": "mystery"
+    },
+    "target_words": {
+      "type": "number",
+      "title": "Default target length (words)",
+      "description": "Target manuscript length offered when starting a new book.",
+      "default": 85000
+    }
+  }
+}
