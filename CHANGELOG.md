@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 — 2026-11-10
+
+Frontmatter cut to what the Claude plugin directory accepts from community plugins.
+
+- Skills keep only `name`, `description` and `allowed-tools`, and `allowed-tools` is `Read, Glob` or `Read, Glob, Grep` everywhere. Writing into `book/` now asks for the usual permission. `bible`, `outline`, `novel-start` and `doctor` no longer set `disable-model-invocation`; their descriptions say to run them only when the author asks. The craft skills now appear in the slash menu, and argument hints are gone.
+- Agents keep only `name` and `description`. They run on the session's model and get the session's tools, so the outliner can now be offered the shell like any other agent, behind the usual permission prompt. Each agent reads its craft skills from the plugin root at the start instead of having them preloaded.
+
 ## 0.1.0 — 2026-11-10
 
 First release of the lite edition, made from [Novelsmith](https://github.com/Nannakaroliina/novelsmith) 0.3.18 for the Claude plugin directory.

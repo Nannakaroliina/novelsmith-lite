@@ -1,7 +1,6 @@
 ---
 name: doctor
-description: Check that novelsmith-lite works in this environment (especially Cowork) — plugin files found, settings, and the four planning agents — and explain what the lite edition does without scripts or hooks. Use when the author says "/novelsmith-lite:doctor", after installing or updating the plugin, or when an agent or skill seems not to find its files.
-disable-model-invocation: true
+description: Run only when the author asks for it. Check that novelsmith-lite works in this environment (especially Cowork) — plugin files found, settings, and the four planning agents — and explain what the lite edition does without scripts or hooks. Use when the author says "/novelsmith-lite:doctor", after installing or updating the plugin, or when an agent or skill seems not to find its files.
 allowed-tools: Read, Glob
 ---
 

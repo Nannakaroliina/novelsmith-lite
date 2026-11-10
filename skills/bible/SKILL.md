@@ -1,9 +1,7 @@
 ---
 name: bible
-description: Run novelsmith's stage 2 with author checkpoints — the cast and character sheets via the character-designer agent and the places, institutions, rules and timeline via the worldbuilder agent, in parallel — or create or update one character or world entry. The only route besides the author's own edits for changing book/bible/. Use when the author says "/novelsmith-lite:bible", wants characters, names, suspects, a setting, an institution, a timeline or the hidden crime timeline built or changed.
-disable-model-invocation: true
-argument-hint: "[all|characters|world|character or place name]"
-allowed-tools: Read, Glob, Grep, Edit(book/**), Agent, AskUserQuestion
+description: Run only when the author asks for it. Run novelsmith's stage 2 with author checkpoints — the cast and character sheets via the character-designer agent and the places, institutions, rules and timeline via the worldbuilder agent, in parallel — or create or update one character or world entry. The only route besides the author's own edits for changing book/bible/. Use when the author says "/novelsmith-lite:bible", wants characters, names, suspects, a setting, an institution, a timeline or the hidden crime timeline built or changed.
+allowed-tools: Read, Glob, Grep
 ---
 
 # Bible: characters, world, timeline

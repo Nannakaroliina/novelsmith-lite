@@ -52,10 +52,10 @@ Once `scenes.yaml` holds scenes, a bare `/novelsmith-lite:outline` asks whether 
 | `skills/genre` | `/novelsmith-lite:genre [genre]` or auto | Loads one genre contract; `references/mystery.md`, `references/mystery-nordic-finnish.md` |
 | `skills/de-ai` | `/novelsmith-lite:de-ai <path> [--detect\|--rewrite]` | Fiction-specific AI-tell audit; four reference tiers |
 | `skills/craft-structure`, `craft-character`, `craft-prose` | auto | Beat map and scene test; arc engine and voice; line-level craft |
-| `agents/story-architect` | via `outline` | Divergent premises and endings, then premise + beat table (Opus) |
-| `agents/character-designer` | via `bible` | Cast roles, name candidates, character sheets with voice and knowledge ledger (Opus) |
-| `agents/worldbuilder` | via `bible` | Places and institutions as pressure; backstory and hidden crime timeline (Sonnet) |
-| `agents/outliner` | via `outline` | Scene manifest, chapters, clue plants; check-and-fix loop; de-AI outline check (Opus) |
+| `agents/story-architect` | via `outline` | Divergent premises and endings, then premise + beat table |
+| `agents/character-designer` | via `bible` | Cast roles, name candidates, character sheets with voice and knowledge ledger |
+| `agents/worldbuilder` | via `bible` | Places and institutions as pressure; backstory and hidden crime timeline |
+| `agents/outliner` | via `outline` | Scene manifest, chapters, clue plants; check-and-fix loop; de-AI outline check |
 | `templates/` | — | Premise, style sheet, character, world, timeline, acts, scene manifest, clue ledger, summaries, critique note, progress |
 
 ## The book tree

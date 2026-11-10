@@ -1,7 +1,6 @@
 ---
 name: craft-structure
 description: Novel-level and scene-level structure for novelsmith. Gives the consensus beat map with percentages (three-act, Weiland, Save the Cat, Seven-Point, Story Grid, Hero's Journey merged), what each beat must accomplish and the test a reviewer applies; scene craft (Scene/Sequel, Five Commandments, value shift, polarity, try/fail, in-late/out-early) mapped onto scenes.yaml fields; pacing, micro-tension, pinch points and sagging-middle fixes; first-page red flags and ending tests; theme as controlling idea vs counter-idea; revision order; a structural reviewer checklist. Use when writing or reviewing book/outline/acts.md or scenes.yaml, planning beats, diagnosing pacing or a sagging middle, judging whether a scene earns its place, or when the author asks about acts, beats, the midpoint, pinch points, scenes, chapter endings, openings, or endings. Also use before diagnosing "missing conflict" so the author's chosen structural model (arc, kishōtenketsu, Alison shapes) is respected.
-user-invocable: false
 ---
 
 # Structure: beats, scenes, pacing, endings

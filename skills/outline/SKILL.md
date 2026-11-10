@@ -1,9 +1,7 @@
 ---
 name: outline
-description: Run novelsmith-lite's outline-first stages with author checkpoints — stage 1 (premise, theme, ending and act beats via the story-architect agent, starting from five or more divergent directions) and stage 3 (chapters and the scene manifest via the outliner agent, checked against the outline rules). Use when the author says "/novelsmith-lite:outline", wants to shape the premise or ending, plan acts, chapters or scenes, build or fix scenes.yaml, or check the outline before drafting.
-disable-model-invocation: true
-argument-hint: "[premise|scenes [repair|rebuild]|check]"
-allowed-tools: Read, Glob, Grep, Edit(book/**), Agent, AskUserQuestion
+description: Run only when the author asks for it. Run novelsmith-lite's outline-first stages with author checkpoints — stage 1 (premise, theme, ending and act beats via the story-architect agent, starting from five or more divergent directions) and stage 3 (chapters and the scene manifest via the outliner agent, checked against the outline rules). Use when the author says "/novelsmith-lite:outline", wants to shape the premise or ending, plan acts, chapters or scenes, build or fix scenes.yaml, or check the outline before drafting.
+allowed-tools: Read, Glob, Grep
 ---
 
 # Outline: premise → acts → scenes

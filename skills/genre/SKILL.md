@@ -1,8 +1,6 @@
 ---
 name: genre
 description: Genre contracts, obligatory scenes and reader expectations for novels (mystery and Nordic/Finnish crime in depth; thriller, romance, fantasy, SF, horror, literary, historical, kidlit, erotica planned). Use when outlining, drafting, or reviewing any fiction, when the user names a genre or subgenre, asks whether a book "delivers" for its genre, or asks about fair play, clues, suspects, beats, tropes or word counts.
-user-invocable: true
-argument-hint: "[genre or subgenre]"
 ---
 
 # Genre knowledge

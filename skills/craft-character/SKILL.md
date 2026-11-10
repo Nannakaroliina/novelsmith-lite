@@ -1,7 +1,6 @@
 ---
 name: craft-character
 description: Building and auditing novel characters — the arc engine (Want/Need, Lie/Truth, Ghost, misbelief), protagonist audit against the character sheets in book/bible/characters/, antagonist design, supporting-cast orchestration, agency and motivation, distinct dialogue voice with NEVER-SAYS lists, setting as pressure on character, and knowledge-ledger continuity. Use when creating or revising characters, character sheets, arcs, antagonists, cast lists, motivation, or dialogue voice, and when a reviewer checks whether a character is consistent, has agency, or earns their ending (stage 2 bible, stage 5 critique).
-user-invocable: false
 ---
 
 # Character craft
