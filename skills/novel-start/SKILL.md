@@ -1,9 +1,7 @@
 ---
 name: novel-start
-description: Scaffold a new novel project (book/ tree, premise, style sheet, progress checkpoint) by interviewing the author. Use when the user wants to start a new novel, set up a book project, or says "new book" or "/novelsmith-lite:novel-start".
-disable-model-invocation: true
-argument-hint: "[working title]"
-allowed-tools: Read, Write(book/**), Glob, AskUserQuestion
+description: Run only when the author asks for it. Scaffold a new novel project (book/ tree, premise, style sheet, progress checkpoint) by interviewing the author. Use when the user wants to start a new novel, set up a book project, or says "new book" or "/novelsmith-lite:novel-start".
+allowed-tools: Read, Glob, Grep
 ---
 
 # Start a new novel

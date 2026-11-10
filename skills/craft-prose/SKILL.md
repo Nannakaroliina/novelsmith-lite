@@ -1,7 +1,6 @@
 ---
 name: craft-prose
 description: Sentence- and paragraph-level craft for drafting and line editing fiction. Covers psychic distance (Gardner's five levels), filter words, head-hopping, show vs tell done right (R.U.E., Maass's inner/outer/other modes, emotion without stated-feeling flatness or body-cue cliché), specificity and detail selection, sentence rhythm and white space, dialogue subtext and beats, metaphor discipline, scene openings and closings at the line level, Browne & King's self-editing checks, and a line-editor checklist for stages 4 and 5. Use when drafting any scene, line editing, revising prose, or when a user asks about POV, show vs tell, dialogue, sentence rhythm, description, or voice. Does not own the AI-tell catalogue (see de-ai); this skill and de-ai are one layer and must not contradict each other.
-user-invocable: false
 ---
 
 # craft-prose

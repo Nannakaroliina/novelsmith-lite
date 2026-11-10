@@ -1,8 +1,6 @@
 ---
 name: de-ai
 description: Fiction layer for detecting and removing "sounds AI-written" tells in a novel draft, at outline, scene, and dialogue level. Covers the measured structural fingerprint (stated themes, body-cue emotion, no subplots, tidy endings), always-fix craft failures, rate-limited tells counted per 1,000 words against the author's own baseline, outline-level checks, and over-correction traps. Use when drafting a scene (stage 4 self-check), critiquing or revising a chapter (stages 5–6), running the book pass (stage 7), or whenever the user says a passage "sounds like AI", "sounds generic", asks to humanize, de-slop, detect AI-isms, or scan a scene. Uses the avoid-ai-writing skill's business-prose vocabulary tiers when that skill is installed, and a short bundled list otherwise.
-user-invocable: true
-argument-hint: "[scene or chapter path] [--detect|--rewrite]"
 ---
 
 # De-AI: fiction layer
