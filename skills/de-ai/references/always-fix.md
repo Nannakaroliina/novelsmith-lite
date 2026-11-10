@@ -120,7 +120,7 @@ After (ch5):
 
 ## 9. Corporate and business lexicon in narration
 
-Two lexicons exist. The "delve / tapestry / testament / underscore / leverage / navigate the complexities / foster" set belongs to reports and press releases and is nearly always an error inside fiction narration. The full tiered tables live in the Anthropic `avoid-ai-writing` skill; do not reproduce them. Run its Tier 1 list over narration; in dialogue, treat a hit as a voice break unless the character's `voice` field says they talk like a consultant.
+Two lexicons exist. The "delve / tapestry / testament / underscore / leverage / navigate the complexities / foster" set belongs to reports and press releases and is nearly always an error inside fiction narration. The full tiered tables live in the separate `avoid-ai-writing` skill, which this plugin does not ship; do not reproduce them. If that skill is installed, run its Tier 1 list over narration; if not, use the words quoted above as the list and say in the critique that the full list was not available; in dialogue, treat a hit as a voice break unless the character's `voice` field says they talk like a consultant.
 
 - [ ] Any Tier 1 hit in narration: P1.
 - [ ] Also flag copula avoidance in narration ("the room boasted", "the window served as") and "-ing" participial pseudo-analysis ("highlighting her isolation").

@@ -23,6 +23,14 @@ You plan the scenes of a novel whose state lives in `book/`. The scene manifest 
 3. The genre reference named in `premise.md`, following the preloaded genre skill: its obligatory scenes and placement rules.
 4. `book/outline/scenes.yaml` and `book/outline/chapters.md` if they exist (you may be repairing, not starting).
 
+## Mode
+
+The delegation message names one; with none, use `build` when no manifest exists and `repair` when one does.
+
+- **build**: no manifest yet; write it from scratch as below.
+- **repair**: the manifest may hold the author's own edits. Change only what an ERROR of the outline check needs, scene by scene, and leave every other scene and field word for word. Do not act on warnings; list them in your reply.
+- **rebuild**: the author asked for a new manifest. Rebuild it as below, but keep every scene id and field that still fits, and list in your reply the scenes you removed or changed substantially.
+
 ## Build the manifest
 
 Write `book/outline/scenes.yaml` in the shape of `<plugin root>/templates/scenes.yaml` (keep its header comment with the beat and flag vocabularies). Replace the template's example scene.
@@ -48,7 +56,7 @@ Write `book/outline/chapters.md` as one table: chapter, POV, scene ids, word tar
 
 Apply `<plugin root>/skills/outline/references/outline-check.md` by reading the files, row by row; do not skip a row because it looks fine at a glance. Its result is PASS, FAIL with findings to fix, or CANNOT CHECK when the manifest cannot be read (it names the file, the line and the cause, for example an unquoted `: ` or a repeated key). On CANNOT CHECK, fix that line in the file you wrote and check again; if the broken file is not one you may write, or it is `scenes.yaml` and its `waivers` entry is not empty, report the line to the author instead.
 
-Fix every ERROR by changing the outline, not by gaming the check, and check again. Stop after the check passes or after three fix rounds, whichever comes first. If an error persists because of an anchored decision or because fixing it needs a decision only the author can make (a new character, a different ending), stop fixing it and report it. Then address WARNINGS where the fix is a planning improvement; leave the rest and list them.
+Fix every ERROR by changing the outline, not by gaming the check, and check again. Stop after the check passes or after three fix rounds, whichever comes first. If an error persists because of an anchored decision or because fixing it needs a decision only the author can make (a new character, a different ending), stop fixing it and report it. Then, in build and rebuild mode only, address WARNINGS where the fix is a planning improvement; leave the rest and list them.
 
 Write the final result, in the report shape `outline-check.md` gives, to `book/critiques/outline/outline-check-<YYYY-MM-DD>.md`. It is a manual check: never call it a validator's PASS.
 

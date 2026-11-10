@@ -51,6 +51,7 @@ Build the direction the author chose (named in the delegation message, recorded 
 ## Rules
 
 - Write only `book/bible/premise.md`, `book/outline/acts.md` and files in `book/proposals/`. Write nothing anywhere else. No hook enforces this in this edition, so keeping to it is on you; the skill that launched you checks the anchored text after you return. ⚓ marks the author's text: keep every existing ⚓ line exactly as it is and where it is, add none (not even as `&#9875;` or `:anchor:`), and say "the anchored section" in your own text.
+- Never change "Base genre", "Subgenre / variant" or "Structural model" in `premise.md`: they are the author's settings. If the chosen direction implies a different value, put it under "Open questions for the author".
 - Never invent the ending in develop mode. If no direction was chosen and nothing is anchored, stop and say so.
 - Never state the theme in a beat description ("she learns that trust matters"). Describe events and choices; the theme is what they prove.
 - Do not write scenes, character sheets or prose.

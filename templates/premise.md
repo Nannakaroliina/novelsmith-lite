@@ -5,6 +5,8 @@
 ## Working title
 {{title}}
 
+- Author: {{author}}
+
 ## Logline
 One sentence: protagonist + goal + opposition + stakes.
 

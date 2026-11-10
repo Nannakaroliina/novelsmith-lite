@@ -42,7 +42,7 @@ You are setting up the file-first state for a novel. The `book/` tree in the pro
    └── progress.md             ← templates/progress.md
    ```
 
-   Fill in `premise.md` with whatever the author gave (logline, genre, length, comps). Leave the rest of the template prompts in place for the author to complete. Put any decisions the author stated firmly under `## ⚓ Anchored`.
+   Fill in `premise.md` with whatever the author gave (logline, genre, length, comps). Always replace the two example values in its Genre block: "Subgenre / variant" with the author's answer or `none`, and "Structural model" with `arc` unless the author named kishotenketsu or alison. Agents never change these settings, so they must hold real values from the start. Leave the rest of the template prompts in place for the author to complete. Put any decisions the author stated firmly under `## ⚓ Anchored`.
 
 4. **Load the genre contract.** Read `${CLAUDE_SKILL_DIR}/../genre/SKILL.md` and the one reference file that matches the base genre (and the variant file if one exists, e.g. `mystery-nordic-finnish.md`). Copy the genre's *reader promise* into `premise.md` under "The promise to the reader", and its *obligatory scenes* into `acts.md` as rows the outline must deliver.
 

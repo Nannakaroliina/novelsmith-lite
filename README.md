@@ -9,7 +9,7 @@ This is the lite edition of [Novelsmith](https://github.com/Nannakaroliina/novel
 | Outline check | `validate-outline.py`: exact and repeatable | The same rules applied by reading the files, labelled "manual check" |
 | Anchored decisions (⚓) | A hook blocks any agent that tries to change them | Agents are told not to; the skills compare the anchored text before and after each agent and show you any change to restore |
 | Agents' write scopes | A hook keeps each agent in its own folders | Each agent's instructions only |
-| Requirements | Python 3 | None |
+| Requirements | Python 3 | None (de-ai uses the separate `avoid-ai-writing` skill's vocabulary list if you have it installed, and a short bundled list otherwise) |
 
 If you want the guarantees, use the full edition.
 
@@ -36,14 +36,17 @@ In Cowork, plugin settings are not prompted for: `/novelsmith-lite:novel-start` 
 | 1 Premise | `/novelsmith-lite:outline premise` | `story-architect` | 5+ divergent directions in `proposals/`, then `bible/premise.md`, `outline/acts.md` | You pick a direction and anchor decisions |
 | 2 Bible | `/novelsmith-lite:bible [all\|characters\|world\|<name>]` | `character-designer` ∥ `worldbuilder` | Name candidates in `proposals/`, then `bible/characters/*.md`, `bible/world/*.md`, `bible/timeline.md` | You pick names and check `[verify]` facts |
 | 3 Outline | `/novelsmith-lite:outline scenes` | `outliner` | `outline/scenes.yaml`, `outline/chapters.md`, clue plants, `critiques/outline/outline-check-<date>.md`, `critiques/outline/de-ai-outline-<date>.md` | Outline check passes; you approve |
+| — | `/novelsmith-lite:outline scenes repair` or `scenes rebuild` | `outliner` | Repair changes only what an error needs; rebuild plans the manifest again | Same as stage 3 |
 | — | `/novelsmith-lite:outline check` | — | nothing | Outline check report only |
+
+Once `scenes.yaml` holds scenes, a bare `/novelsmith-lite:outline` asks whether to check, repair or rebuild it, so your own edits are never planned over without your say.
 
 ## Components
 
 | Component | Invoke | Purpose |
 |---|---|---|
 | `skills/novel-start` | `/novelsmith-lite:novel-start [title]` | Interviews you and scaffolds `book/` from `templates/` |
-| `skills/outline` | `/novelsmith-lite:outline [premise\|scenes\|check]` | Stages 1 and 3 with checkpoints; `references/outline-check.md`, `references/anchor-check.md` |
+| `skills/outline` | `/novelsmith-lite:outline [premise\|scenes [repair\|rebuild]\|check]` | Stages 1 and 3 with checkpoints; `references/outline-check.md`, `references/anchor-check.md` |
 | `skills/bible` | `/novelsmith-lite:bible [scope]` | Stage 2 with checkpoints; the route for changing canon |
 | `skills/doctor` | `/novelsmith-lite:doctor` | Checks plugin files, settings and agents in this environment |
 | `skills/genre` | `/novelsmith-lite:genre [genre]` or auto | Loads one genre contract; `references/mystery.md`, `references/mystery-nordic-finnish.md` |

@@ -7,7 +7,7 @@ The lite edition has no hook, so nothing stops an agent from changing the author
 - Every line in `book/` that contains ⚓, `&#9875;` or `:anchor:`.
 - Every section whose heading contains one of those marks: the heading and everything under it up to the next heading of the same or a higher level (such as `## ⚓ Anchored` in `premise.md`).
 - `book.waivers` in `book/outline/scenes.yaml`.
-- The "Base genre", "Variant" and "Structural model" values in `book/bible/premise.md`.
+- The "Base genre", "Subgenre / variant" and "Structural model" values in `book/bible/premise.md`.
 
 ## Before launching an agent
 

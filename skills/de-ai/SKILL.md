@@ -1,6 +1,6 @@
 ---
 name: de-ai
-description: Fiction layer for detecting and removing "sounds AI-written" tells in a novel draft, at outline, scene, and dialogue level. Covers the measured structural fingerprint (stated themes, body-cue emotion, no subplots, tidy endings), always-fix craft failures, rate-limited tells counted per 1,000 words against the author's own baseline, outline-level checks, and over-correction traps. Use when drafting a scene (stage 4 self-check), critiquing or revising a chapter (stages 5–6), running the book pass (stage 7), or whenever the user says a passage "sounds like AI", "sounds generic", asks to humanize, de-slop, detect AI-isms, or scan a scene. Sits on top of the Anthropic avoid-ai-writing skill, which owns the business-prose vocabulary tiers.
+description: Fiction layer for detecting and removing "sounds AI-written" tells in a novel draft, at outline, scene, and dialogue level. Covers the measured structural fingerprint (stated themes, body-cue emotion, no subplots, tidy endings), always-fix craft failures, rate-limited tells counted per 1,000 words against the author's own baseline, outline-level checks, and over-correction traps. Use when drafting a scene (stage 4 self-check), critiquing or revising a chapter (stages 5–6), running the book pass (stage 7), or whenever the user says a passage "sounds like AI", "sounds generic", asks to humanize, de-slop, detect AI-isms, or scan a scene. Uses the avoid-ai-writing skill's business-prose vocabulary tiers when that skill is installed, and a short bundled list otherwise.
 user-invocable: true
 argument-hint: "[scene or chapter path] [--detect|--rewrite]"
 ---
@@ -27,7 +27,7 @@ Per StoryScope's per-model profile, Claude-written fiction shows: **notably flat
 ### Modes
 | Mode | Does | Does not |
 |---|---|---|
-| `--detect` | Lists every finding with quoted evidence; per-1,000-word counts for every rate-limited item against the limits in `book/bible/style.md`; writes to `book/critiques/chNN/de-ai-<date>.md` | Edit the manuscript |
+| `--detect` | Lists every finding with quoted evidence; per-1,000-word counts for every rate-limited item against the limits in `book/bible/style.md`; writes to `book/critiques/chNN/de-ai-<date>.md`, or for `book/outline/` to `book/critiques/outline/de-ai-outline-<date>.md` in the format of `references/outline-level.md` | Edit the manuscript |
 | `--rewrite` | Everything in detect, plus a proposed diff per P0/P1 finding | Apply any diff; the author accepts or rejects each one |
 
 **NEVER** write to `book/manuscript/` in either mode. **NEVER** contradict a `## ⚓ Anchored` section in `book/bible/premise.md`; if a finding would, note it as "anchored, not proposed".
@@ -50,7 +50,7 @@ Every `references/` path below is in `${CLAUDE_SKILL_DIR}/references/`.
 - **Replacement clichés come from randomized sets.** When a diff replaces a stock phrase, draw from a set of 3–4 alternatives in `rate-limit.md` and vary the pick across findings. A fixed replacement table is a new fingerprint. Prefer cutting over replacing.
 - **Never over-correct.** Plain emotion words, comma splices, digressions, and repeated clear words are human signals (`references/do-not-overcorrect.md`). If the original passage is strong, say so and propose nothing.
 - **Continuity drift is a pipeline problem.** Eye colour changes, re-described rooms, a character knowing something too early: do not propose prose patches. File it as a P0 against the **knowledge ledger** in `book/bible/characters/<slug>.md` and `book/bible/timeline.md`, and point the author to `/novelsmith-lite:bible <character name>`. Most such errors cluster mid-narrative in high-entropy passages; check chapter middles first.
-- **Business-prose vocabulary** (delve, tapestry, testament, underscore, leverage, robust…) is owned by the Anthropic `avoid-ai-writing` skill, Tier 1–3 tables. Run that skill's Tier 1 list over narration and flag any hit as P1; do not reproduce the tables here. In dialogue, corporate lexicon is a voice finding (see always-fix).
+- **Business-prose vocabulary** (delve, tapestry, testament, underscore, leverage, robust…) is covered in full by the Tier 1–3 tables of the separate `avoid-ai-writing` skill, which this plugin does not ship. If that skill is installed in this session, run its Tier 1 list over narration and flag any hit as P1; never look for it anywhere else. If it is not installed, use the short list in `references/always-fix.md` §9 instead and say in the critique that the full vocabulary list was not available. In dialogue, corporate lexicon is a voice finding (see always-fix).
 
 ## Which reference, which stage
 
@@ -60,7 +60,7 @@ Every `references/` path below is in `${CLAUDE_SKILL_DIR}/references/`.
 | `references/always-fix.md` | Wrong regardless of count: explained subtext, stated theme, label-on-cue, wisdom closers, coda overreach, broken similes, chatbot artifacts, recycled descriptors, corporate lexicon, therapy-speak, mic-drops, dissolving conflict, default names, "as you know" | 4 self-check, 5 critique |
 | `references/rate-limit.md` | Tells only in excess: budgets per 1,000 words, regex where one exists, replacement sets | 4 self-check, 5 critique |
 | `references/do-not-overcorrect.md` | Human signals to leave alone, over-correction failure modes, detector caveats | 6 revise (read before applying any diff) |
-| Anthropic `avoid-ai-writing` SKILL.md | Vocabulary tiers, severity model, rewrite-from-scratch trigger | 5, as a sub-check |
+| `avoid-ai-writing` SKILL.md (optional, not bundled; only if installed) | Vocabulary tiers, severity model, rewrite-from-scratch trigger | 5, as a sub-check |
 
 Open one reference at a time. Do not load all four for a single scene.
 
